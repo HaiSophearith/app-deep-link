@@ -2,8 +2,8 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 module.exports = {
     mode: "none",
     entry: {
-        'app_deep_link': './src/index.js',
-        'app_deep_link.min': './src/index.js'
+        'app-deep-link': './src/index.js',
+        'app-deep-link.min': './src/index.js'
     },
     output: {
         filename: '[name].js',
