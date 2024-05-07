@@ -6,10 +6,13 @@ module.exports = {
         'app-deep-link.min': './src/index.js'
     },
     output: {
-        filename: '[name].js',
+        filename: (chunkData) => {
+            return chunkData.chunk.name === 'app-deep-link.min' ? '[name].min.js' : '[name].js';
+        },
         library: 'AppDeepLink',
         libraryTarget: 'umd',
     },
+    
     optimization: {
         minimize: true,
         minimizer: [
