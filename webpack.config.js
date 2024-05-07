@@ -7,12 +7,11 @@ module.exports = {
     },
     output: {
         filename: (chunkData) => {
-            return chunkData.chunk.name === 'app-deep-link.min' ? '[name].min.js' : '[name].js';
+            return chunkData.chunk.name === 'app-deep-link.min' ? 'public/[name].js' : '[name].js';
         },
         library: 'AppDeepLink',
         libraryTarget: 'umd',
     },
-    
     optimization: {
         minimize: true,
         minimizer: [
