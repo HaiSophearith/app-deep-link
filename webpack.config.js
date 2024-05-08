@@ -19,11 +19,12 @@ module.exports = {
   //   libraryTarget: "umd",
   // },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     filename: "[name].js",
     library: "AppDeepLink",
     libraryTarget: "umd",
   },
+  
   optimization: {
     minimize: true,
     minimizer: [
